@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Online Job Registration Form</h1>
+<div>
+<form name="myform" method="post"  action="/jobform.php" onsubmit="return validateForm()">
+<label for="fname">Name</label><br>
+<input type="text" name="fname"><br>
+<label for="email">Email ID:</label><br>
+<input type="email" name="email"><br>
+<label for="pass">Create Password:</label><br>
+<input type="password" name="password"><br>
+<label for="mobile">Mobile Number:</label><br>
+<input type="text" name="mobileno"><br>
+<label for="loc">Current Location:</label><br>
+<input type="text" name="location"><br>
+<label for="industry">Industry:</label><br>
+<select name="industry">
+<option value="Any">Any</option>
+<option value="Any">Automotive/ Ancillaries</option>
+<option value="Any">Banking/ Financial Services</option>
+<option value="Any">Bio Technology & Life Sciences</option>
+<option value="Any">Chemicals/Petrochemicals</option>
+<option value="Any">Construction & Engineering</option>
+<option value="Any">IT/ Computers - Hardware</option>
+<option value="Any">IT/ Computers - Software</option>
+<option value="Any">KPO/Analytics</option>
+<option value="Any">ITES/BPO</option>
+<option value="Any">Other</option>
+</select><br>
+<label for="keyskills">Keyskills:<label><br>
+<input type="text" name="keyskills"><br>
+<label for="email">Upload Resume:</label><br>
+<input type="file" name="upload"><br>
+<input type="submit" value="Register Now" class="btn">
+</form>
+</div>
+</body>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+</script>
+</html>
